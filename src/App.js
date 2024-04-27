@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import PerformanceOverview from "./components/PerformanceOverview";
+import CreatorCard from "./components/CreatorCard";
+import { motion } from "framer-motion";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className="header">
+        <motion.h1
+          initial={{ opacity: 0, scale: 0.4 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.4 }}
         >
-          Learn React
-        </a>
-      </header>
+          WDM Homework Report
+        </motion.h1>
+      </div>
+      <PerformanceOverview />
+
+      <div className="creators-container">
+        <CreatorCard name="Hasan Hammadeh" userId="hasan_311469" />
+        <CreatorCard name="Bashar Qarat" userId="bashar_301296" />
+        <CreatorCard name="Ali Ahmad" userId="ali_haidar_296891" />
+        <CreatorCard name="Jawa Shriba" userId="jawa_317878" />
+      </div>
     </div>
   );
 }
