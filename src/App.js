@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import PerformanceOverview from "./components/PerformanceOverview";
 import CreatorCard from "./components/CreatorCard";
